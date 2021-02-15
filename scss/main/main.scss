@@ -1,0 +1,377 @@
+.header-bg {
+    background-image: url(../img/bg-img.jpg);
+    max-width: $size01;
+    width: 100%;
+    height: $size02;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    opacity: 0.6;
+    @include d-flex (flex,space-around, end);
+    @include border (1px, solid, $color02);
+    @include transition-hover (all,0.4s,ease,0.4s);
+    &:hover {
+        opacity: 1.0;   
+    }
+    .nav-box {
+        max-width: $size05;
+        width: 100%;
+        @include d-flex (flex,space-between,end);
+        position: sticky;
+        top: 0;
+        margin-top: $size06;
+        &:hover {
+           box-shadow: 5px 15px 28px $color02;
+           @include border (0.1px, solid, $color02);
+           @include transition-hover (all,0.4s,ease,0.4s);
+        }
+        @media only screen and (max-width:1080px) {
+            width: 90%;
+        }
+        @media only screen and (max-width:740px) {
+            width: 95%;
+            @include d-flex (flex,space-between, center);
+            flex-direction: column;
+        }
+        @media only screen and (max-width:360px) {
+            width: 100%;
+            flex-direction: column-reverse;
+        }
+        .logo {
+          font-size: $size03;
+          color: $color01;
+          font-family: 'Poppins-B';
+          &:hover {
+            text-shadow: 2px 2px 4px $color03;
+            @include transition-hover (all,0.2s,ease,0.2s);
+          }
+          @media only screen and (max-width:740px) {
+              font-size: $size11;
+          }
+          @media only screen and (max-width:260px) {
+              font-size: $size06;
+        }
+        }
+        .navi {
+            max-width: $size08;
+            width: 100%;
+            @media only screen and (max-width:740px) {
+                padding-top: $size06;
+            }
+            @media only screen and (max-width:360px) {
+                padding: 0 0 30px 170px;
+            }
+            .nav-ul {
+                @include d-flex (flex,space-between, center);
+                .nav-li {
+                    .nav-a {
+                      font-size: $size07;
+                      color: $color01;
+                      font-family: 'Poppins-SB';
+                      &:hover {
+                        text-shadow: 2px 2px 4px $color03;
+                        @include transition-hover (all,0.2s,ease,0.2s);
+                      }
+                      @media only screen and (max-width:360px) {
+                        display: none;
+                      }
+                    }
+                }
+            
+            }
+            .burger-icon {
+                color: $color01;
+                font-size: $size06;
+                @include d-flex (none,space-between, center);
+                @media only screen and (max-width:360px) {
+                    display: block;
+                    left: 20%;
+                }
+            }
+        }
+    }
+    .heder-box {
+        position: absolute;
+        top: $size09;
+        left: $size10;
+        text-align: center;
+        @media only screen and (max-width:740px) {
+            top: 150px;
+            left: 250px;
+        }
+        @media only screen and (max-width:590px) {
+            top: 60%;
+            left: 30%;
+        }
+        @media only screen and (max-width:480px) {
+            top: 150px;
+            left: 150px;
+        }
+        @media only screen and (max-width:480px) {
+            left: 90px;
+        }
+        @media only screen and (max-width:260px) {
+            left: 15%;
+        }
+        .header-h1 {
+            font-size: $size11;
+            color: $color01;
+            font-family: 'Poppins-EB';
+        }
+        .header-h4-box {
+            @include d-flex (flex,end,center);
+            @media only screen and (max-width:480px) {
+                @include d-flex (flex,center,center);
+                flex-direction: column;
+            }
+            .header-h4 {
+                &::before {
+                    content: ' ';
+                    margin: 0 $size03 0 $size03;
+                    @include border (1px, solid, $color01);
+                }
+                &::after {
+                    content: ' ';
+                    margin: 0 $size03 0 $size03;
+                    @include border (1px, solid, $color01);
+                }
+                @media only screen and (max-width:480px) {
+                    padding-top: $size04;
+                }
+                .header-a {
+                    font-size: $size03;
+                    color: $color01;
+                    font-family: 'Poppins-M';
+                    &:hover {
+                      text-shadow: 2px 2px 4px $color03;
+                      @include border (0.1px, solid, $color02);
+                      @include transition-hover (all,0.4s,ease,0.4s);
+                    }
+                }
+            }
+        }
+    }
+}
+.sect-map {
+    margin: $size11 $size13 $size11 $size09;
+    @media only screen and (max-width:1080px) {
+        width: 85%;
+    }
+    @media only screen and (max-width:740px) {
+        width: 70%;
+    }
+    @media only screen and (max-width:560px) {
+        width: 50%;
+    }
+    @media only screen and (max-width:360px) {
+        width: 100%;
+        margin: $size04;
+    }
+    .map-box {
+        @include border (1px, solid, $color02);
+        @media only screen and (max-width:1080px) {
+            width: 90%;
+        }
+        .map {
+            max-width: $size05;
+            width: 100%;
+        }
+    }
+}
+.sect-img {
+    .img-text {
+        max-width: $size08;
+        width: 100%;
+        margin: 0 0 $size11 $size09;
+        @media only screen and (max-width:1080px) {
+            text-align: center;
+            margin: 0 0 $size11 $size12;
+        }
+        @media only screen and (max-width:750px) {
+            margin: 0 0 $size11 $size17;
+        }
+        @media only screen and (max-width:560px) {
+            margin: 0 auto;
+        }
+        .img-h5 {
+            color: $color04;
+            font-size: $size03;
+            font-family: 'Poppins-B';
+        }
+        .img-p {
+            color: $color03;
+            font-size: $size11;
+            font-family: 'Poppins-EB';
+        }
+    }
+    .img-container {
+        @include d-flex (flex,space-between,center);
+        @media only screen and (max-width:1080px) {
+            flex-direction: column;
+        }
+        .img-box {
+            @include border (1px, solid, $color02);
+        }
+    }
+}
+.footer-bg {
+    background-color: $color05;
+    max-width: $size01;
+    width: 100%;
+    height: $size02;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    opacity: 0.6;
+    @include d-flex (flex,space-evenly, center);
+    @include border (1px, solid, $color02);
+    @include transition-hover (all,0.4s,ease,0.4s);
+    flex-direction: column;
+    &:hover {
+        opacity: 1.0;   
+    }
+    @media only screen and (max-width:640px) {
+        height: 500px;
+    }
+    @media only screen and (max-width:590px) {
+        height: 700px;
+    }
+    @media only screen and (max-width:530px) {
+        height: 800px;
+    }
+    .foot-container {
+        max-width: $size05;
+        width: 100%;
+        @include d-flex (flex,space-between, baseline);
+        @media only screen and (max-width:1080px) {
+            width: 90%;
+        }
+        @media only screen and (max-width:640px) {
+            flex-wrap: wrap;
+        }
+        @media only screen and (max-width:590px) {
+            justify-content: center;
+        }
+        .foot-box {
+            max-width: $size12;
+            width: 100%;
+            &:first-child {
+                margin-right: $size12;
+            }
+            @media only screen and (max-width:940px) {
+                display: flex;
+                text-align: center;
+                flex-direction: column;
+                &:first-child {
+                    margin-right: $size04;
+                } 
+            }
+            .foot-h2 {
+                color: $color01;
+                font-size: $size14;
+                font-family: Poppins-B;
+                padding-bottom: $size04;
+            }
+            .foot-p {
+                color: $color01;
+                font-size: $size03;
+                font-family: Poppins-M;
+            }
+            .foot-icon {
+                padding-top: $size04;
+                .icon-size {
+                    font-size: $size06;
+                    height: $size06;
+                    &:hover {
+                        text-shadow: 2px 2px 4px $color01;
+                        @include transition-hover (all,0.2s,ease,0.2s);
+                    }
+                    .fa-facebook {
+                        color: $color07;
+                    }
+                    .fa-twitter-square {
+                        color: $color04;
+                    }
+                    .fa-google-plus {
+                        color: $color08;
+                    }
+                    .fa-youtube {
+                        color: $color08;
+                    }
+                }
+            }
+            .foot-ul {
+                .ul-box {
+                    @media only screen and (max-width:940px) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    @media only screen and (max-width:640px) {
+                        width: auto;
+                    }
+                    .li-box {
+                        display: flex;
+                        padding-bottom: $size04;
+                        &:hover {
+                            text-shadow: 2px 2px 4px $color01;
+                            @include transition-hover (all,0.2s,ease,0.2s);
+                        }
+                        .fa-envelope {
+                            color: $color04;
+                            padding-right: $size03;
+                        }
+                        .contact {
+                            font-size: $size03;
+                            color: $color01;
+                            font-family: 'Poppins-M';
+                        }
+                        .foot-a {
+                            color: $color04;
+                            font-size: $size03;
+                            font-family: Poppins-M; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .foot-end {
+        max-width: $size05;
+        width: 100%;
+        @include d-flex (flex,space-between, baseline);
+        @media only screen and (max-width:1080px) {
+            width: 90%;
+        }
+        @media only screen and (max-width:940px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        .end-l {
+            display: flex;
+            .end-h5 {
+                font-size: $size03;
+                color: $color06;
+                font-family: 'Poppins-M';
+            }
+            .end-a {
+                font-size: $size03;
+                color: $color04;
+                font-family: 'Poppins-M';
+                &:hover {
+                    text-shadow: 2px 2px 4px $color01;
+                    @include transition-hover (all,0.2s,ease,0.2s);
+                }
+            }
+        }
+        .end-site {
+            font-size: $size03;
+            color: $color04;
+            font-family: 'Poppins-M';
+            &:hover {
+                text-shadow: 2px 2px 4px $color01;
+                @include transition-hover (all,0.2s,ease,0.2s);
+            }
+        }
+    }
+}

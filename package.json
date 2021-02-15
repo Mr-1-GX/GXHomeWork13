@@ -1,0 +1,24 @@
+{
+  "name": "gxhomework13",
+  "version": "1.0.0",
+  "description": "MrGX",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mr-1-GX/GXHomeWork13.git"
+  },
+  "author": "Work",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mr-1-GX/GXHomeWork13/issues"
+  },
+  "homepage": "https://github.com/Mr-1-GX/GXHomeWork13#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0"
+  }
+}
